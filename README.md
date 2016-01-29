@@ -1,8 +1,11 @@
 Supported tags and respective Dockerfile links
 
+
 5.5.47, 5.5 (5.5/Dockerfile)
 
+
 5.6.28, 5.6 (5.6/Dockerfile)
+
 
 5.7.10, 5.7, 5, latest (5.7/Dockerfile)
 
