@@ -1,14 +1,17 @@
 # mysql
-MySQL is a widely used, open-source relational database management system (RDBMS).
+
 Supported tags and respective Dockerfile links
+
 5.5.47, 5.5 (5.5/Dockerfile)
 5.6.28, 5.6 (5.6/Dockerfile)
 5.7.10, 5.7, 5, latest (5.7/Dockerfile)
+
 For more information about this image and its history, please see the relevant manifest file (library/mysql). This image is updated via pull requests to the docker-library/official-images GitHub repo.
 
 For detailed information about the virtual/transfer sizes and individual layers of each of the above supported tags, please see the mysql/tag-details.md file in the docker-library/docs GitHub repo.
 
 What is MySQL?
+
 MySQL is the world's most popular open source database. With its proven performance, reliability and ease-of-use, MySQL has become the leading database choice for web-based applications, covering the entire range from personal projects and websites, via e-commerce and information services, all the way to high profile web properties including Facebook, Twitter, YouTube, Yahoo! and many more.
 
 For more information and related downloads for MySQL Server and other MySQL products, please visit www.mysql.com.
@@ -16,6 +19,7 @@ For more information and related downloads for MySQL Server and other MySQL prod
 
 
 How to use this image
+
 Start a mysql server instance
 Starting a MySQL instance is simple:
 
