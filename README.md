@@ -1,7 +1,9 @@
 Supported tags and respective Dockerfile links
 
 5.5.47, 5.5 (5.5/Dockerfile)
+
 5.6.28, 5.6 (5.6/Dockerfile)
+
 5.7.10, 5.7, 5, latest (5.7/Dockerfile)
 
 For more information about this image and its history, please see the relevant manifest file (library/mysql). This image is updated via pull requests to the docker-library/official-images GitHub repo.
@@ -35,18 +37,23 @@ Connect to MySQL from the MySQL command line client
 The following command starts another mysql container instance and runs the mysql command line client against your original mysql container, allowing you to execute SQL statements against your database instance:
 
 $ docker run -it --link some-mysql:mysql --rm mysql sh -c 'exec mysql -h"$MYSQL_PORT_3306_TCP_ADDR" -P"$MYSQL_PORT_3306_TCP_PORT" -uroot -p"$MYSQL_ENV_MYSQL_ROOT_PASSWORD"'
+
 ... where some-mysql is the name of your original mysql container.
 
 More information about the MySQL command line client can be found in the MySQL documentation
 
 Container shell access and viewing MySQL logs
+
 The docker exec command allows you to run commands inside a Docker container. The following command line will give you a bash shell inside your mysql container:
 
 $ docker exec -it some-mysql bash
+
 The MySQL Server log is available through Docker's container log:
 
 $ docker logs some-mysql
+
 Using a custom MySQL configuration file
+
 The MySQL startup configuration is specified in the file /etc/mysql/my.cnf, and that file in turn includes any files found in the /etc/mysql/conf.d directory that end with .cnf. Settings in files in this directory will augment and/or override settings in /etc/mysql/my.cnf. If you want to use a customized MySQL configuration, you can create your alternative configuration file in a directory on the host machine and then mount that directory location as /etc/mysql/conf.d inside the mysql container.
 
 If /my/custom/config-file.cnf is the path and name of your custom configuration file, you can start your mysql container like this (note that only the directory path of the custom config file is used in this command):
